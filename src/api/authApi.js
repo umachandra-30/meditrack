@@ -10,6 +10,4 @@ export const registerpatient = (data) => {
 export const loginPatient = (data) => {
   return API.post("/patient/login", data);
 };
-export const updateOptionalDetails = (data) =>{
-  axios.post("/patient/update-optional", data);
-};
+

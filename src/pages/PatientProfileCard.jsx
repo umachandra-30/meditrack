@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 const PatientProfileCard=({user})=>
+
 {
+    const navigate = useNavigate();
     return(
         <div className="bg-white-2xl shadow-lg w-full max-w-sm p-6 ">
             <div className="flex flex-col items-center">
@@ -35,10 +38,14 @@ const PatientProfileCard=({user})=>
                 </ul>
             </div>
             <div className="space-y-3">
-                <div className="flex justify-between items-center cursor-pointer">
-                    <span className="font-medium">My Health Reocrds</span>
-                    <span className="text-gray-400">{">"}</span>
-                </div>
+               <div
+  className="flex justify-between items-center cursor-pointer"
+  onClick={() => navigate(`/patient/${user.patientId}/records`)}
+>
+  <span className="font-medium"> My Health Records</span>
+  <span className="text-gray-400">{">"}</span>
+</div>
+
                  <div className="flex justify-between items-center cursor-pointer">
                     <span className="font-medium">Appointments</span>
                     <span className="text-gray-400">{">"}</span>

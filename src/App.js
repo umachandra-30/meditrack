@@ -5,6 +5,8 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CalendarAppointments from "./components/CalenderAppointments";
+import HealthRecords from "./pages/HealthRecords";
+
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/patient/:patientId" element={<PatientHome />} />
           <Route path="/patient/:patientId/appointments" element={<CalendarAppointments />} />
         </Route>
+        <Route path="/patient/:patientId/records" element={<HealthRecords />} />
+
 
         {/* Fallback */}
         <Route path="*" element={<h2>Page Not Found</h2>} />

@@ -12,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/patient", require("./routes/patientRoutes"));
+app.use("/api/appointments", require("./routes/appointmentRoutes"));
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
